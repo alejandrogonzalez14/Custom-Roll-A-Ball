@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,14 +11,27 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
 
+    // stores the player score (how many pickups player has picked)
+    private int score;
+
     // Speed at which the player moves.
     public float speed = 0;
+
+    // Used to display current score
+    public TextMeshProUGUI scoreText;
+    // Used to display winning message
+    public GameObject winTextObject;
 
     // Start is called before the first frame update.
     void Start()
     {
         // Get and store the Rigidbody component attached to the player.
         rb = GetComponent<Rigidbody>();
+        // Initialize score
+        score = 0;
+        SetScoreText();
+        // Hide win message when starting
+        winTextObject.SetActive(false);
     }
 
     // This function is called when a move input is detected.
@@ -48,6 +62,20 @@ public class PlayerController : MonoBehaviour
         {
             // Deactivate the collided object (making it disappear).
             other.gameObject.SetActive(false);
+            // Increase score
+            score = score + 1;
+            SetScoreText();
+        }
+    }
+
+    void SetScoreText()
+    {
+        // Update GUI text
+        scoreText.text = "Score: " + score.ToString();
+        // Display win message if no more collectibles to pick up
+        if (score >= 12)
+        {
+            winTextObject.SetActive(true);
         }
     }
 }
