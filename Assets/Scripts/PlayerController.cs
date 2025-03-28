@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -41,5 +39,15 @@ public class PlayerController : MonoBehaviour
 
         // Apply force to the Rigidbody to move the player.
         rb.AddForce(movement * speed);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // Check if the object the player collided with has the "PickUp" tag.
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            // Deactivate the collided object (making it disappear).
+            other.gameObject.SetActive(false);
+        }
     }
 }
