@@ -1,23 +1,36 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
-    // Moves to Minigame scene
+    // Moves to Minigame scene after a delay
     public void Play()
     {
-        SceneManager.LoadScene("Minigame");
+        StartCoroutine(PlayWithDelay());
     }
 
-    // Exits the game when 'Exit' Button is clicked
+    // Exits the game after a delay
     public void Exit()
     {
-    #if UNITY_EDITOR
+        StartCoroutine(ExitWithDelay());
+    }
+
+    private IEnumerator PlayWithDelay()
+    {
+        yield return new WaitForSeconds(0.5f);  // Wait for 0.5 seconds
+        SceneManager.LoadScene("Minigame");     // Load the scene
+    }
+
+    private IEnumerator ExitWithDelay()
+    {
+        yield return new WaitForSeconds(0.5f);  // Wait for 0.5 seconds
+#if UNITY_EDITOR
         // Stop playing in the Unity Editor
         UnityEditor.EditorApplication.isPlaying = false;
-    #else
+#else
         // Quit the application (works in the built game)
         Application.Quit();
-    #endif
+#endif
     }
 }
