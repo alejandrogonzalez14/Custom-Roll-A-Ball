@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
@@ -1231,20 +1231,36 @@ PrefabInstance:
       objectReference: {fileID: 679333475}
     - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
       propertyPath: soundEffects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
       propertyPath: soundEffects.Array.data[0].groupID
       value: select
       objectReference: {fileID: 0}
     - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
+      propertyPath: soundEffects.Array.data[1].groupID
+      value: collect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
       propertyPath: soundEffects.Array.data[0].clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
+      propertyPath: soundEffects.Array.data[1].clips.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
       propertyPath: soundEffects.Array.data[0].clips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 3c026707b9e03784c8b9d279116d13c3, type: 3}
+    - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
+      propertyPath: soundEffects.Array.data[0].clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6676194981807414850, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
+      propertyPath: soundEffects.Array.data[1].clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: b69d61a668b704c458be9a767a97c812, type: 3}
     - target: {fileID: 6676194981807414851, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
       propertyPath: m_RootOrder
       value: 4

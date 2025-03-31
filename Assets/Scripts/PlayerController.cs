@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
         {
             // Deactivate the collided object (making it disappear).
             other.gameObject.SetActive(false);
+            // Play collect sound
+            SoundManager.Instance.PlaySound3D("collect", other.transform.position);
             // Increase score
             score = score + 1;
             SetScoreText();
