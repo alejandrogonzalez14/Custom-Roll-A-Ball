@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
         if (score >= 12)
         {
             winTextObject.SetActive(true);
+            SoundManager.Instance.PlaySound2D("win");
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
         }
     }
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour
             // Update the winText to display "You Lose!"
             winTextObject.gameObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
+            SoundManager.Instance.PlaySound2D("lose");
         }
     }
 }
