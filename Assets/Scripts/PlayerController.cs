@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
         SetScoreText();
         // Hide win message when starting
         winTextObject.SetActive(false);
+
+        MusicManager.Instance.PlayMusic("bg");
     }
 
     // This function is called when a move input is detected.

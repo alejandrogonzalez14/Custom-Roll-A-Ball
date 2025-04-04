@@ -4,6 +4,11 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        MusicManager.Instance.PlayMusic("bg", 0.0f);
+    }
+
     // Moves to Minigame scene after a delay
     public void Play()
     {
