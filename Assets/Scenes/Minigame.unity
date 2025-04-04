@@ -2372,6 +2372,14 @@ PrefabInstance:
       propertyPath: tracks.Array.data[0].trackName
       value: bg
       objectReference: {fileID: 0}
+    - target: {fileID: 6590427486906617068, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -976097391568389462, guid: 8cd8cfecf187fc14bb3a37e35dcff969, type: 2}
+    - target: {fileID: 6676194981801046511, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 7551117637209310550, guid: 8cd8cfecf187fc14bb3a37e35dcff969, type: 2}
     - target: {fileID: 6676194981807414848, guid: bf585c1fe403ad048a16b6382406277d, type: 3}
       propertyPath: m_Name
       value: AudioManager

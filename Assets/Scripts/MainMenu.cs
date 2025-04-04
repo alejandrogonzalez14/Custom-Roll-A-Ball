@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public AudioMixer audioMixer;
+
     private void Start()
     {
         MusicManager.Instance.PlayMusic("bg", 0.0f);
@@ -37,5 +41,15 @@ public class MainMenu : MonoBehaviour
         // Quit the application (works in the built game)
         Application.Quit();
 #endif
+    }
+
+    public void UpdateMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVolume", volume);
+    }
+
+    public void UpdateSoundVolume(float volume)
+    {
+        audioMixer.SetFloat("SFXVolume", volume);
     }
 }
