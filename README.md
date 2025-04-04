@@ -10,7 +10,14 @@ This project has been created using Unity 2020.2.4f1.
 
 ## 🔧 **Modifications to the Base Game**
 
-TBD
+- **Main Menu**: Added a fully functional main menu screen.
+- **Sound Effects**: Implemented sound effects for various actions:
+  - Button selection
+  - Coin collection
+  - Winning
+  - Losing
+- **Background Music**: Added background music for both the main menu and the minigame.
+- **Options Submenu**: Created an options submenu within the main menu that allows players to control the volume levels for both music and sound effects (SFX).
 
 ## 🏁 **Getting Started**
 You can play the game by following these simple steps:
